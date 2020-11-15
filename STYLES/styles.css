@@ -12,5 +12,23 @@ a {
 .container h2
 {
     color:#2B4D1B;
+    font-family: 'Merriweather', serif;
+
+}
+
+.container h3
+{
+    color:#2B4D1B;
+}
+
+.container p 
+{
+    font-family: 'Quicksand', sans-serif;
+}
+
+.nav-item
+{
+    font-family: 'Quicksand', sans-serif;
+   
 }
 
