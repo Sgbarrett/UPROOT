@@ -1,4 +1,4 @@
-a {
+a {  
     color: black;
 }
 
@@ -31,4 +31,14 @@ a {
     font-family: 'Quicksand', sans-serif;
    
 }
+html {
+    overflow: hidden;
+    height: 100%;
+}
+
+body {
+    overflow: auto;
+    height: 100%;
+}
+
 
