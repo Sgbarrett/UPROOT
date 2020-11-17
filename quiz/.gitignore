@@ -1,0 +1,8 @@
+README.md.backup
+.vscode
+text.html
+yjang-workspace-vscode.code-workspace
+node_modules
+tailwindcss
+/css/vendor
+/php/osiquiz-mail.php
