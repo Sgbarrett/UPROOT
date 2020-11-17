@@ -1,9 +1,6 @@
-# OSI Quiz
+# Plant Quiz
 
-Buzzfeed-style interactive quiz to connect UCF students with opportunities across OSI that match their personality and interests with organizations and within OSI. Based on the Volunteer UCF page of the UCF Office of Student Involvement website.
+Buzzfeed-style interactive quiz to connect users with the plants we selected that adapts the OSI Connect Quiz to our class project.
 
-Live demo: [Netlify](https://blissful-pike-61c4df.netlify.app/)
+Code by Yjang Wynter
 
-Code by Nick Evans & Yjang Wynter
-
-Illustrations by Nick Evans

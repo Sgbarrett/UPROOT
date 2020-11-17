@@ -28,7 +28,9 @@
     <link rel="stylesheet" href="css/vendor/bootstrap.min.css" type="text/css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="src/css/quiz.css" type="text/css">
+    <link rel="stylesheet" href="./css/quiz.min.css" type="text/css">
+     <!--  Quiz Javascript -->
+     <script src="./js/quiz.min.js"></script>
 
     <title>Plant Picker Quiz</title>
 </head>
@@ -42,20 +44,17 @@
     </div>
 
     <!-- Begin content -->
-    <div class="container pt-0">
+    <div class="container pt-0 ">
         <div class="row justify-content-center mb-4">
             <div class="col-xs-12 col-lg-8">
 
                 <!-- Title/Description -->
                 <div class="title-box py-2">
                     <div class="title">
-                        <p class="h1 my-2 pt-4 pb-2" style="font-weight: bold">Want to make an impact?<br> Considering
-                            getting involved this year?<br> Take the next step with OSI!</p>
+                        <h1 class="h1 my-2 pt-4 pb-2" style="font-weight: bold">Find the right plants for you!</h1>
                     </div>
-                    <div class="description my-2 pb-4">
-                        <p>Looking to make a positive impact? The Office of Student Involvement is here to guide you!
-                            Take the quiz below to find out how you can use your skills and passions to make a
-                            difference:</p>
+                    <div class="description text-center my-2 pb-4">
+                        <p>Take the quiz below to discover which plants suit your lifestyle</p>
                     </div>
                 </div>
 
@@ -286,10 +285,10 @@
                         <div class="col-6">
                             <li role="button" class="card quiz-choice" data-choice-value="a">
                                 <div class="zoom-effect">
-                                    <img class="card-img-top" src="img/doer.png">
+                                    <img class="card-img-top" src="https://via.placeholder.com/500">
                                 </div>
                                 <div class="card-body">
-                                    Do'er
+                                    Very good
                                 </div>
                             </li>
                         </div>
@@ -298,10 +297,10 @@
                         <div class="col-6">
                             <li role="button" class="card quiz-choice" data-choice-value="b">
                                 <div class="zoom-effect">
-                                    <img class="card-img-top" src="img/helper.png">
+                                    <img class="card-img-top" src="https://via.placeholder.com/500">
                                 </div>
                                 <div class="card-body">
-                                    Helper
+                                    Good
                                 </div>
                             </li>
                         </div>
@@ -313,10 +312,10 @@
                         <div class="col-6">
                             <li role="button" class="card quiz-choice" data-choice-value="c">
                                 <div class="zoom-effect">
-                                    <img class="card-img-top" src="img/thinker.png">
+                                    <img class="card-img-top" src="https://via.placeholder.com/500">
                                 </div>
                                 <div class="card-body">
-                                    Thinker
+                                    Somewhat forgetful
                                 </div>
                             </li>
                         </div>
@@ -325,37 +324,10 @@
                         <div class="col-6">
                             <li role="button" class="card quiz-choice" data-choice-value="d">
                                 <div class="zoom-effect">
-                                    <img class="card-img-top" src="img/creator.png">
+                                    <img class="card-img-top" src="https://via.placeholder.com/500">
                                 </div>
                                 <div class="card-body">
-                                    Creator
-                                </div>
-                            </li>
-                        </div>
-
-                    </div>
-                    <div class="row mb-4">
-
-                        <!-- Choice #5 -->
-                        <div class="col-6">
-                            <li role="button" class="card quiz-choice" data-choice-value="e">
-                                <div class="zoom-effect">
-                                    <img class="card-img-top" src="img/pursuader.png">
-                                </div>
-                                <div class="card-body">
-                                    Persuader
-                                </div>
-                            </li>
-                        </div>
-
-                        <!-- Choice #6 -->
-                        <div class="col-6">
-                            <li role="button" class="card quiz-choice" data-choice-value="f">
-                                <div class="zoom-effect">
-                                    <img class="card-img-top" src="img/organizer.png">
-                                </div>
-                                <div class="card-body">
-                                    Organizer
+                                    Very forgetful
                                 </div>
                             </li>
                         </div>
@@ -381,10 +353,10 @@
                         <div class="col-6">
                             <li role="button" class="card quiz-choice" data-choice-value="a">
                                 <div class="zoom-effect">
-                                    <img class="card-img-top" src="img/office.png">
+                                    <img class="card-img-top" src="https://via.placeholder.com/500">
                                 </div>
                                 <div class="card-body">
-                                    Library, lab, or office
+                                    North
                                 </div>
                             </li>
                         </div>
@@ -393,10 +365,10 @@
                         <div class="col-6">
                             <li role="button" class="card quiz-choice" data-choice-value="b">
                                 <div class="zoom-effect">
-                                    <img class="card-img-top" src="img/outdoors.png">
+                                    <img class="card-img-top" src="https://via.placeholder.com/500">
                                 </div>
                                 <div class="card-body">
-                                    The Great Outdoors
+                                    South
                                 </div>
                             </li>
                         </div>
@@ -408,10 +380,10 @@
                         <div class="col-6">
                             <li role="button" class="card quiz-choice" data-choice-value="c">
                                 <div class="zoom-effect">
-                                    <img class="card-img-top" src="./img/others-07.png">
+                                    <img class="card-img-top" src="https://via.placeholder.com/500">
                                 </div>
                                 <div class="card-body">
-                                    Being around others
+                                    East
                                 </div>
                             </li>
                         </div>
@@ -420,15 +392,16 @@
                         <div class="col-6">
                             <li role="button" class="card quiz-choice" data-choice-value="d">
                                 <div class="zoom-effect">
-                                    <img class="card-img-top" src="img/onthego.png">
+                                    <img class="card-img-top" src="https://via.placeholder.com/500">
                                 </div>
                                 <div class="card-body">
-                                    On the go
+                                    West
                                 </div>
                             </li>
                         </div>
 
                     </div>
+
                 </ul>
             </div>
         </div>
@@ -447,10 +420,10 @@
                         <div class="col-6">
                             <li role="button" class="card quiz-choice" data-choice-value="a">
                                 <div class="zoom-effect">
-                                    <img class="card-img-top" src="./img/2938_OSIQuizArt_DC_Service .png">
+                                    <img class="card-img-top" src="https://via.placeholder.com/500">
                                 </div>
                                 <div class="card-body">
-                                    Service
+                                        Yes
                                 </div>
                             </li>
                         </div>
@@ -459,70 +432,15 @@
                         <div class="col-6">
                             <li role="button" class="card quiz-choice" data-choice-value="b">
                                 <div class="zoom-effect">
-                                    <img class="card-img-top" src="./img/2938_OSIQuizArt_DC_Event Planning.png">
+                                    <img class="card-img-top" src="https://via.placeholder.com/500">
                                 </div>
                                 <div class="card-body">
-                                    Event planning
+                                    No
                                 </div>
                             </li>
                         </div>
 
                     </div>
-                    <div class="row mb-4">
-
-                        <!-- Choice #3 -->
-                        <div class="col-6">
-                            <li role="button" class="card quiz-choice" data-choice-value="c">
-                                <div class="zoom-effect">
-                                    <img class="card-img-top" src="./img/2938_OSIQuizArt_DC_Fundraising.png">
-                                </div>
-                                <div class="card-body">
-                                    Fundraising or philanthropy
-                                </div>
-                            </li>
-                        </div>
-
-                        <!-- Choice #4 -->
-                        <div class="col-6">
-                            <li role="button" class="card quiz-choice" data-choice-value="d">
-                                <div class="zoom-effect">
-                                    <img class="card-img-top" src="./img/2938_OSIQuizArt_DC_TrainingResearch.png">
-                                </div>
-                                <div class="card-body">
-                                    Training, research and/or development
-                                </div>
-                            </li>
-                        </div>
-
-                    </div>
-                    <div class="row mb-4">
-
-                        <!-- Choice #5 -->
-                        <div class="col-6">
-                            <li role="button" class="card quiz-choice" data-choice-value="e">
-                                <div class="zoom-effect">
-                                    <img class="card-img-top" src="./img/2938_OSIQuizArt_DC_Entertainment.png">
-                                </div>
-                                <div class="card-body">
-                                    Entertainment industry
-                                </div>
-                            </li>
-                        </div>
-
-                        <!-- Choice #6 -->
-                        <div class="col-6">
-                            <li role="button" class="card quiz-choice" data-choice-value="f">
-                                <div class="zoom-effect">
-                                    <img class="card-img-top" src="./img/2938_OSIQuizArt_DC_Digital Media.png">
-                                </div>
-                                <div class="card-body">
-                                    Digital Media
-                                </div>
-                            </li>
-                        </div>
-
-                    </div>
-
                 </ul>
 
             </div>
@@ -698,7 +616,7 @@
                                     <img class="card-img-top" src="https://via.placeholder.com/500">
                                 </div>
                                 <div class="card-body">
-                                    Weekly
+                                    Large and grows out
                                 </div>
                             </li>
                         </div>
@@ -710,7 +628,7 @@
                                     <img class="card-img-top" src="https://via.placeholder.com/500">
                                 </div>
                                 <div class="card-body">
-                                    Bi-weekly
+                                    Large and grows up
                                 </div>
                             </li>
                         </div>
@@ -725,7 +643,7 @@
                                     <img class="card-img-top" src="https://via.placeholder.com/500">
                                 </div>
                                 <div class="card-body">
-                                    Monthly
+                                    Medium and grows out
                                 </div>
                             </li>
                         </div>
@@ -737,7 +655,7 @@
                                     <img class="card-img-top" src="https://via.placeholder.com/500">
                                 </div>
                                 <div class="card-body">
-                                    1-2 weeks per semester
+                                    Medium and grows up
                                 </div>
                             </li>
                         </div>
@@ -752,11 +670,23 @@
                                     <img class="card-img-top" src="https://via.placeholder.com/500">
                                 </div>
                                 <div class="card-body">
-                                    Whenever
+                                    Small and grows out
                                 </div>
                             </li>
                         </div>
+
+                        <!-- Choice #6 -->
+                        <div class="col-6">
+                        <li role="button" class="card quiz-choice" data-choice-value="e">
+                            <div class="zoom-effect">
+                                <img class="card-img-top" src="https://via.placeholder.com/500">
+                            </div>
+                            <div class="card-body">
+                                Small and grows up
+                            </div>
+                        </li>
                     </div>
+                </div>
                 </ul>
             </div>
         </div>
@@ -803,8 +733,7 @@
     <!-- JQuery -->
     <script src="js/vendor/jquery.min.js"></script>
 
-    <!-- Buzzfeed Quiz Javascript -->
-    <script src="src/js/quiz.js"></script>
+   
 
 
 </body>

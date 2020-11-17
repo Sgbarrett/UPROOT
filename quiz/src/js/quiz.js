@@ -1,91 +1,18 @@
 const QUIZLENGTH = 11
-
+// array of objects
 const plants = [
 
     {
-        name: "Late Knights",
-        info: "Late Knights hosts monthly events that features free food, prizes, and entertainment. The goal of Late Knights is to provide a space that is fun, safe, on-campus, and free of drugs and alcohol. Events are held on campus from 10 p.m. to 1 a.m.",
-        link: "https://osi.ucf.edu/agencies/late-knights"
+        name: "Plant 1",
+        info: "Description 1. Describes the plant, some of its characters. Below is a link to the plant or to buy it",
+        link: "https://example.com/"
     },
 
     {
-        name: "Knights of the Round Table",
-        info: "Knights of the Round Table is an administrative resource to all student organizations and an advisory council to all students pursuing involvement during their collegiate experience. This includes KnightQuest, a one-on-one consultation service designed to help students find an organization on campus, and registering and assigning cubicle and storage space for RSOs.",
-        link: "https://osi.ucf.edu/agencies/kort"
-    },
-
-    {
-        name: "Knight-thon",
-        info: "Knight-Thon, Dance Marathon at the University of Central Florida, benefits Orlando Health Arnold Palmer Hospital for Children. We are UCF’s largest student-driven philanthropy and part of the national Miracle Network Dance Marathon movement. Knight-Thon is a yearlong effort in which we raise funds and awareness for our local kids, leading up to our 20-hour celebration in the spring. Last year, our campus joined together to raise over $1.288 million!",
-        link: "https://osi.ucf.edu/agencies/knight-thon"
-    },
-
-    {
-        name: "Campus Activities Board",
-        info: "CAB is responsible for the planning and execution of various events on the UCF campus. Our events include large-scale concerts and comedy shows, speaking engagements, the Mr. and Miss UCF Scholarship Pageants, movie screenings, and much more!",
-        link: "https://osi.ucf.edu/agencies/cab"
-    },
-
-    {
-        name: "Knights of the Connection",
-        info: "KOTC focuses on serving as a bridge between connection campuses to the Orlando campus. It is dedicated to helping students “Get Involved” while providing quality programs and services at each of UCF’s connector campuses",
-        link: "https://osi.ucf.edu/agencies/kotc"
-    },
-
-    {
-        name: "Volunteer UCF",
-        info: "Through a variety of events and programs such as Knights Give Back and the Alternative Break Program, students gain valuable knowledge and experience, become connected to volunteer opportunities of their interest, and expand their community outreach.",
-        link: "https://osi.ucf.edu/agencies/vucf"
-    },
-
-    {
-        name: "Student Engagement",
-        info: "Student Engagement is a partnership with OSI, SJA and Valencia College to provide programming, services, student organizations, and student leadership opportunities at the Downtown Campus.",
-        link: "https://osi.ucf.edu/agencies/student-engagement"
-    },
-
-    {
-        name: "Homecoming",
-        info: "Homecoming is a fun week that celebrates campus traditions for the campus community. Come and celebrate the black and gold spirit by participating in traditions like: Comedy Knight, Concert Knight, Movie Knight, Knights Got Talent, Spirit Splash, Fireworks Festival, Greek Extravaganza Step Show, and many more.",
-        link: "https://osi.ucf.edu/agencies/homecoming"
-    },
-
-    {
-        name: "Rosen Life",
-        info: "Rosen Life serves students at the Rosen College Campus hosting events, programming, and services. These include Rosen’s Get Your Grill On, Rosen’s Got Talent, Mr. & Ms. Hospitality, Relaxation Week and many more.",
-        link: "https://osi.ucf.edu/agencies/rosne-life"
-    },
-
-    {
-        name: "OSI Productions",
-        info: "OSI Productions provides high-quality video, photo, and livestream content to various departments and agencies across campus.",
-        link: "https://osi.ucf.edu/agencies/osi-productions"
-    },
-
-    {
-        name: "Knights of the Turntables",
-        info: "Knights of the Turntables (KoT) aims to provide the UCF community a fun, low-cost way of bringing DJ, music, and MC services to live events.",
-        link: "https://osi.ucf.edu/agencies/kott"
-    },
-
-    {
-        name: "Black & Gold Studios",
-        info: "A professional recording studio available to UCF students. Students can record podcasts, music, and voiceovers based on availability.",
-        link: "https://osi.ucf.edu/agencies/black-gold-studios"
-    },
-
-
-    {
-        name: "Graduate Outreach",
-        info: "Graduate Outreach provides programming, events, and services for Graduate students, connecting students with alumni, faculty, and the community. Events include Monthly First Wednesday Cafe, Mocktail, LinkedIn Photoshoots, and Grad Gathering.",
-        link: "https://osi.ucf.edu/agencies/graduate-outreach"
-    },
-
-    {
-        name: "Design Group",
-        info: "Design Group is the team of students that create graphics, illustrations, and promotional material for the Office of Student Involvement. We also handle web design and development for OSI, Student Government, and other organizations. This includes building fun projects like this quiz you just played. :D",
-        link: "https://osi.ucf.edu/agencies/design-group"
-    },
+        name: "Plant 2",
+        info: "Description 2. Describes the plant, some of its characters. Below is a link to the plant or to buy it",
+        link: "https://example.com/"
+    }
 
 ];
 
@@ -128,52 +55,23 @@ var Quiz = function () {
     // Answer Key
 
     this._calcResult = function () {
+       /* 
+       Whatever plant name: Adding more of the same letter weighs the response more 
+       to the total to calculate the top result. 
+       The length of the 2D array is equal to the number of questions
+        */
+       
+        // plantsAnswers[0] = Plant 1
+        const p1 = new Array(["a","a"], ["a",  "c", "d"], ["a", "c"], ["a"], ["a", "c","d"], ["a", "d"], ["a", "a"], ["a","a","a"], ["a","a","a"], ["a","a","a"], ["a","a","a"]);
 
-        // plantsAnswers[0] = Late Knights
-        const lk = new Array(["b","b"], ["a", "b", "c", "d", "e"], ["a", "c"], ["a"], ["a", "c","f"], ["c", "d"], ["b"], ["g","g","g"], ["c","c","c"]);
+        // plantsAnswers[1] = Plant 2
+        const p2 = new Array(["b","b"], [ "b", "c", "d"], ["b", "c"], ["b"], ["b", "c","d"], ["b", "d"], ["b", "b"], ["b","b","b"], ["b","b","b"], ["b","b","b"], ["b","b","b"]);
 
-        // plantsAnswers[1] = Knights of the Round Table
-        const kort = new Array(["a","b"], ["a", "b", "c", "d", "e"], ["a"], ["b"], ["a", "e", "f"], ["a","c", "d"], ["b", "d"], ["f","f","f"], ["a", "b", "c", "d", "e"]);
 
-        // plantsAnswers[2] = Knight-Thon
-        const kt = new Array(["a", "b"], ["a", "b", "c", "d", "e"], ["a","d"], ["a"], [ "a","b","e"], ["b","c","d"], ["a", "c","c","c"], ["h","h","h"], ["a", "b", "c", "d", "e"]);
-
-        // plantsAnswers[3] = Campus Activities Board
-        const cab = new Array(["a","b"], ["a", "b", "c", "d", "e"], ["a","b"], ["a"], ["b","d", "e","f"], ["c","d"], ["b", "b", "b", "e", "f"], ["e","e","e"], ["a", "b","c"]);
-
-        //plantsAnswers[4] = Knights of the Connection
-        const kotc = new Array(["a","b"], ["a", "b", "c", "d", "e"], ["d","d","d"], ["a", "a", "a","b","b","b"], [ "a","b", "f"], ["a", "c", "d"], ["b","d"], ["f","i"], ["b","c"]);
-        
-        //plantsAnswers[5] = Volunteer UCF
-        const vucf = new Array(["a","a","a"], ["a", "b", "c", "d", "e"], ["a", "c"], ["a", "b"], ["a", "b", "c", "f"], ["a", "b", "c"], ["a", "b","c"], ["h","h","h"], ["e","e","e"]);
-
-        //plantsAnswers[6] = Student Engagement
-        const se = new Array(["a", "b"], ["a", "b", "c", "d", "e"], ["c","c","c"], ["a","a", "a","b", "b","b"], ["b", "e","f"], ["a", "c", "d"], ["b", "e", "f"], ["a", "f", "i"], ["b", "e"]);
-
-        //plantsAnswers[7] = Homecoming
-        const hc = new Array(["a", "b"], ["a", "b", "c", "d", "e"], ["a"], ["a"], ["a", "b", "c", "d", "e", "f"], ["b", "c", "d"], ["b","e"], ["i","i","i"], ["a", "b", "c", "d", "e"]);
-
-        //plantsAnswers[8] = Rosen Life
-        const rl = new Array(["a", "b"], ["a", "b", "c", "d", "e"], ["a", "b","b","b"], ["a","a"], ["a", "b", "c", "d", "e", "f"], ["b","c", "d"], ["b", "e"], ["g"], ["a", "b", "c", "d", "e"]);
-
-        //plantsAnswers[9] = OSI Productions
-        const prod = new Array(["b","b","b"], ["a"], ["b", "c"], ["a"], ["a", "c", "d"], ["b","c","d"], ["e","f"], ["b", "c", "c","c", "d"], ["a", "b", "c", "d", "e"]);
-
-        //plantsAnswers[10] = Knights of the Turntables
-        const kott = new Array(["a", "b"], ["a", "b", "c", "d", "e"], ["a","b","c"], ["a"], ["a","b", "d"], ["b", "c", "d"], ["e","f"], ["b","b","b"], ["a", "b", "c", "d", "e"]);
-
-        //plantsAnswers[11] = Black & Gold Studios
-        const bng = new Array(["a", "b"], ["a", "b", "c", "d", "e"], ["a","b"], ["a", "b"], ["a", "c", "d", "f"], ["a", "c", "d"], ["e","f"], ["b","b","b", "c","d"], ["a", "b", "c", "d", "e"]);
-
-        //plantsAnswers[12] = Graduate Outreach //Had to nerf it by not giving it any extra points.
-        const go = new Array(["a", "b"], ["a", "b", "c", "d", "e"], ["a"], ["b"], ["a", "b", "c", "d", "e", "f"], ["a", "b", "c", "d"], ["a", "b", "c", "d", "e", "f"], ["a", "b", "c", "d", "e", "f", "h", "i"], ["a", "b", "c", "d", "e"]);
-
-        //plantsAnswers[13] = Design Group
-        const dg = new Array(["a", "b"], ["a", "b", "c", "d", "e"], ["a","c"], ["a"], ["a","c", "d", "f"], ["a", "b","c"], ["b","e","f"], ["a","a","a"], ["a","a","a"]);
 
         //add them all into one master array
-
-        const plantsAnswers = new Array(lk, kort, kt, cab, kotc, vucf, se, hc, rl, prod, kott, bng, go, dg);
+        //Needs to be added
+        const plantsAnswers = new Array(p1, p2);
         
         const userChoices = this._tallyResponses();
 
@@ -259,12 +157,12 @@ var Quiz = function () {
 
 
         $resultBox.addClass("resultComplete jumbotron");
-        $resultBox.html("<h1 class='mb-4'><p>Here is your result!</p> <p>You matched with <i>" + plants[resultList[0]].name + '</i></p> </h1> <p>' + plants[resultList[0]].info + '</p><p class="text-center"><a class="my-3 mx-auto btn btn-warning btn-lg" href="' + plants[resultList[0]].link + '"target="_blank"><strong>Visit Website</strong></a></p>');
+        $resultBox.html("<h1 class='mb-4'><p>Here is your result!</p> <p>You matched with <i>" + plants[resultList[0]].name + '</i></p> </h1> <p>' + plants[resultList[0]].info + '</p><p class="text-center"><a style="background-color: #AC631E;"class="my-3 mx-auto btn text-white btn-lg" href="' + plants[resultList[0]].link + '"target="_blank"><strong>Learn more</strong></a></p>');
 
         const resultToString = () => {
             var myStr = '';
             for (let i = 1; i < resultList.length; i++) {
-                myStr += '<li ><a class="collapsed" href="#collapseInfo-' + i + '"data-toggle="collapse" role="button" aria-expanded="false" id="info-' + i + '"><h4><strong><u>' + plants[resultList[i]].name + '</u></strong></h4></a></li><p class="collapse text-center" id="collapseInfo-' + i + '">' + plants[resultList[i]].info + '<br><a class ="btn btn-warning btn-lg my-3 mx-auto text-center" href="' + plants[resultList[i]].link + '" target="_blank"><strong>Visit Website</strong></a></p>';
+                myStr += '<li ><a class="collapsed" href="#collapseInfo-' + i + '"data-toggle="collapse" role="button" aria-expanded="false" id="info-' + i + '"><h4><strong><u>' + plants[resultList[i]].name + '</u></strong></h4></a></li><p class="collapse text-center" id="collapseInfo-' + i + '">' + plants[resultList[i]].info + '<br><a style="background-color: #AC631E;"class="my-3 mx-auto btn text-white btn-lg" href="' + plants[resultList[i]].link + '" target="_blank"><strong>Learn more</strong></a></p>';
 
                 //add objects to results array
                 results.push(plants[resultList[i]]);
@@ -277,7 +175,6 @@ var Quiz = function () {
         if (resultList.length > 1) {
             $resultBox.append('<hr class="my-4"><h2><strong> You also matched with:</strong></h2> <ul id="accordion">' + resultToString() + '</ul><br>');
         }
-        $resultBox.append('<hr class="my-4"><p class="text-center">Schedule a consultation with KnightQuest to learn more about your program and many others. Be sure to screenshot your result!</p><p class="text-center"><a class="btn btn-warning btn-lg" href="mailto:kortoutreach@ucf.edu?subject=Schedule KnightQuest Appointment&body=I got ' + plants[resultList[0]].name + ' as my result from the OSI Quiz. Could I schedule an appointment to learn more about it and my other options to get involved at UCF?"><strong>Schedule Consultation</strong></a></p>');
         
    
         //Animated scroll
