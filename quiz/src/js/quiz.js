@@ -160,14 +160,14 @@ var Quiz = function () {
         $resultBox.html("<h1 class='mb-4'><p>Here is your result!</p> <p>You matched with <i>" + plants[resultList[0]].name + '</i></p> </h1> <p>' + plants[resultList[0]].info + '</p><p class="text-center"><a style="background-color: #AC631E;"class="my-3 mx-auto btn text-white btn-lg" href="' + plants[resultList[0]].link + '"target="_blank"><strong>Learn more</strong></a></p>');
 
         const resultToString = () => {
-            var myStr = '';
+            var plant = '';
             for (let i = 1; i < resultList.length; i++) {
-                myStr += '<li ><a class="collapsed" href="#collapseInfo-' + i + '"data-toggle="collapse" role="button" aria-expanded="false" id="info-' + i + '"><h4><strong><u>' + plants[resultList[i]].name + '</u></strong></h4></a></li><p class="collapse text-center" id="collapseInfo-' + i + '">' + plants[resultList[i]].info + '<br><a style="background-color: #AC631E;"class="my-3 mx-auto btn text-white btn-lg" href="' + plants[resultList[i]].link + '" target="_blank"><strong>Learn more</strong></a></p>';
+                plant += '<li><a class="collapsed" href="#collapseInfo-' + i + '"data-toggle="collapse" role="button" aria-expanded="false" id="info-' + i + '"><h4><strong><u>' + plants[resultList[i]].name + '</u></strong></h4></a></li><p class="collapse text-center" id="collapseInfo-' + i + '">' + plants[resultList[i]].info + '<br><a style="background-color: #AC631E;"class="my-3 mx-auto btn text-white btn-lg" href="' + plants[resultList[i]].link + '" target="_blank"><strong>Learn more</strong></a></p>';
 
                 //add objects to results array
                 results.push(plants[resultList[i]]);
             }
-            return myStr;
+            return plant;
         }
         // Create an object that has two keys: mail, array of objects
         //results.join(',');       
