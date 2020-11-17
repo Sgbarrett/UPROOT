@@ -1,6 +1,6 @@
 const QUIZLENGTH = 11
 
-const ORGINFO = [
+const plants = [
 
     {
         name: "Late Knights",
@@ -129,56 +129,56 @@ var Quiz = function () {
 
     this._calcResult = function () {
 
-        // orgsAnswers[0] = Late Knights
+        // plantsAnswers[0] = Late Knights
         const lk = new Array(["b","b"], ["a", "b", "c", "d", "e"], ["a", "c"], ["a"], ["a", "c","f"], ["c", "d"], ["b"], ["g","g","g"], ["c","c","c"]);
 
-        // orgsAnswers[1] = Knights of the Round Table
+        // plantsAnswers[1] = Knights of the Round Table
         const kort = new Array(["a","b"], ["a", "b", "c", "d", "e"], ["a"], ["b"], ["a", "e", "f"], ["a","c", "d"], ["b", "d"], ["f","f","f"], ["a", "b", "c", "d", "e"]);
 
-        // orgsAnswers[2] = Knight-Thon
+        // plantsAnswers[2] = Knight-Thon
         const kt = new Array(["a", "b"], ["a", "b", "c", "d", "e"], ["a","d"], ["a"], [ "a","b","e"], ["b","c","d"], ["a", "c","c","c"], ["h","h","h"], ["a", "b", "c", "d", "e"]);
 
-        // orgsAnswers[3] = Campus Activities Board
+        // plantsAnswers[3] = Campus Activities Board
         const cab = new Array(["a","b"], ["a", "b", "c", "d", "e"], ["a","b"], ["a"], ["b","d", "e","f"], ["c","d"], ["b", "b", "b", "e", "f"], ["e","e","e"], ["a", "b","c"]);
 
-        //orgsAnswers[4] = Knights of the Connection
+        //plantsAnswers[4] = Knights of the Connection
         const kotc = new Array(["a","b"], ["a", "b", "c", "d", "e"], ["d","d","d"], ["a", "a", "a","b","b","b"], [ "a","b", "f"], ["a", "c", "d"], ["b","d"], ["f","i"], ["b","c"]);
         
-        //orgsAnswers[5] = Volunteer UCF
+        //plantsAnswers[5] = Volunteer UCF
         const vucf = new Array(["a","a","a"], ["a", "b", "c", "d", "e"], ["a", "c"], ["a", "b"], ["a", "b", "c", "f"], ["a", "b", "c"], ["a", "b","c"], ["h","h","h"], ["e","e","e"]);
 
-        //orgsAnswers[6] = Student Engagement
+        //plantsAnswers[6] = Student Engagement
         const se = new Array(["a", "b"], ["a", "b", "c", "d", "e"], ["c","c","c"], ["a","a", "a","b", "b","b"], ["b", "e","f"], ["a", "c", "d"], ["b", "e", "f"], ["a", "f", "i"], ["b", "e"]);
 
-        //orgsAnswers[7] = Homecoming
+        //plantsAnswers[7] = Homecoming
         const hc = new Array(["a", "b"], ["a", "b", "c", "d", "e"], ["a"], ["a"], ["a", "b", "c", "d", "e", "f"], ["b", "c", "d"], ["b","e"], ["i","i","i"], ["a", "b", "c", "d", "e"]);
 
-        //orgsAnswers[8] = Rosen Life
+        //plantsAnswers[8] = Rosen Life
         const rl = new Array(["a", "b"], ["a", "b", "c", "d", "e"], ["a", "b","b","b"], ["a","a"], ["a", "b", "c", "d", "e", "f"], ["b","c", "d"], ["b", "e"], ["g"], ["a", "b", "c", "d", "e"]);
 
-        //orgsAnswers[9] = OSI Productions
+        //plantsAnswers[9] = OSI Productions
         const prod = new Array(["b","b","b"], ["a"], ["b", "c"], ["a"], ["a", "c", "d"], ["b","c","d"], ["e","f"], ["b", "c", "c","c", "d"], ["a", "b", "c", "d", "e"]);
 
-        //orgsAnswers[10] = Knights of the Turntables
+        //plantsAnswers[10] = Knights of the Turntables
         const kott = new Array(["a", "b"], ["a", "b", "c", "d", "e"], ["a","b","c"], ["a"], ["a","b", "d"], ["b", "c", "d"], ["e","f"], ["b","b","b"], ["a", "b", "c", "d", "e"]);
 
-        //orgsAnswers[11] = Black & Gold Studios
+        //plantsAnswers[11] = Black & Gold Studios
         const bng = new Array(["a", "b"], ["a", "b", "c", "d", "e"], ["a","b"], ["a", "b"], ["a", "c", "d", "f"], ["a", "c", "d"], ["e","f"], ["b","b","b", "c","d"], ["a", "b", "c", "d", "e"]);
 
-        //orgsAnswers[12] = Graduate Outreach //Had to nerf it by not giving it any extra points.
+        //plantsAnswers[12] = Graduate Outreach //Had to nerf it by not giving it any extra points.
         const go = new Array(["a", "b"], ["a", "b", "c", "d", "e"], ["a"], ["b"], ["a", "b", "c", "d", "e", "f"], ["a", "b", "c", "d"], ["a", "b", "c", "d", "e", "f"], ["a", "b", "c", "d", "e", "f", "h", "i"], ["a", "b", "c", "d", "e"]);
 
-        //orgsAnswers[13] = Design Group
+        //plantsAnswers[13] = Design Group
         const dg = new Array(["a", "b"], ["a", "b", "c", "d", "e"], ["a","c"], ["a"], ["a","c", "d", "f"], ["a", "b","c"], ["b","e","f"], ["a","a","a"], ["a","a","a"]);
 
         //add them all into one master array
 
-        const orgsAnswers = new Array(lk, kort, kt, cab, kotc, vucf, se, hc, rl, prod, kott, bng, go, dg);
+        const plantsAnswers = new Array(lk, kort, kt, cab, kotc, vucf, se, hc, rl, prod, kott, bng, go, dg);
         
         const userChoices = this._tallyResponses();
 
         //Create an empty array to populate with 0
-        let finalPoints = new Array(orgsAnswers.length).fill(0);
+        let finalPoints = new Array(plantsAnswers.length).fill(0);
         //end the end of the for loop:
         // shuffle an array and check from the end of the array
         //set j as a random number between the range of the start and the selected end point of the array
@@ -217,13 +217,13 @@ var Quiz = function () {
 
                 // will return results with anything except b, so only 
 
-        // this function checks if the user's choice == to value of an organization's answer
+        // this function checks if the user's choice == to value of an plants's answer
         // and adds the amount of points for that question to its total
         function addPoints(answer, j) {
 
-            for (var i = 0; i < orgsAnswers.length; i++) {
+            for (var i = 0; i < plantsAnswers.length; i++) {
                 
-               finalPoints[i] +=orgsAnswers[i][j].filter(c => c === answer).length;
+               finalPoints[i] +=plantsAnswers[i][j].filter(c => c === answer).length;
 
                 }     
                 
@@ -234,12 +234,14 @@ var Quiz = function () {
             console.log(finalPoints);
 
         shuffledMatchList(finalPoints);
-        orgsAnswers.forEach((a,i)=>{
+        /*
+        plantsAnswers.forEach((a,i)=>{
             if (!a[3].includes(userChoices[3])){
                 finalPoints[i] =-1;
             }
             console.log(finalPoints)
         });
+        */
         return shuffledMatchList(finalPoints);
     }
     
@@ -253,19 +255,19 @@ var Quiz = function () {
         let resultList = self._calcResult();
                 // array of objects lists all the organization's that were selected
         let results = new Array();
-        results.push(ORGINFO[resultList[0]]);
+        results.push(plants[resultList[0]]);
 
 
         $resultBox.addClass("resultComplete jumbotron");
-        $resultBox.html("<h1 class='mb-4'><p>Here is your result!</p> <p>You matched with <i>" + ORGINFO[resultList[0]].name + '</i></p> </h1> <p>' + ORGINFO[resultList[0]].info + '</p><p class="text-center"><a class="my-3 mx-auto btn btn-warning btn-lg" href="' + ORGINFO[resultList[0]].link + '"target="_blank"><strong>Visit Website</strong></a></p>');
+        $resultBox.html("<h1 class='mb-4'><p>Here is your result!</p> <p>You matched with <i>" + plants[resultList[0]].name + '</i></p> </h1> <p>' + plants[resultList[0]].info + '</p><p class="text-center"><a class="my-3 mx-auto btn btn-warning btn-lg" href="' + plants[resultList[0]].link + '"target="_blank"><strong>Visit Website</strong></a></p>');
 
         const resultToString = () => {
             var myStr = '';
             for (let i = 1; i < resultList.length; i++) {
-                myStr += '<li ><a class="collapsed" href="#collapseInfo-' + i + '"data-toggle="collapse" role="button" aria-expanded="false" id="info-' + i + '"><h4><strong><u>' + ORGINFO[resultList[i]].name + '</u></strong></h4></a></li><p class="collapse text-center" id="collapseInfo-' + i + '">' + ORGINFO[resultList[i]].info + '<br><a class ="btn btn-warning btn-lg my-3 mx-auto text-center" href="' + ORGINFO[resultList[i]].link + '" target="_blank"><strong>Visit Website</strong></a></p>';
+                myStr += '<li ><a class="collapsed" href="#collapseInfo-' + i + '"data-toggle="collapse" role="button" aria-expanded="false" id="info-' + i + '"><h4><strong><u>' + plants[resultList[i]].name + '</u></strong></h4></a></li><p class="collapse text-center" id="collapseInfo-' + i + '">' + plants[resultList[i]].info + '<br><a class ="btn btn-warning btn-lg my-3 mx-auto text-center" href="' + plants[resultList[i]].link + '" target="_blank"><strong>Visit Website</strong></a></p>';
 
                 //add objects to results array
-                results.push(ORGINFO[resultList[i]]);
+                results.push(plants[resultList[i]]);
             }
             return myStr;
         }
@@ -275,7 +277,7 @@ var Quiz = function () {
         if (resultList.length > 1) {
             $resultBox.append('<hr class="my-4"><h2><strong> You also matched with:</strong></h2> <ul id="accordion">' + resultToString() + '</ul><br>');
         }
-        $resultBox.append('<hr class="my-4"><p class="text-center">Schedule a consultation with KnightQuest to learn more about your program and many others. Be sure to screenshot your result!</p><p class="text-center"><a class="btn btn-warning btn-lg" href="mailto:kortoutreach@ucf.edu?subject=Schedule KnightQuest Appointment&body=I got ' + ORGINFO[resultList[0]].name + ' as my result from the OSI Quiz. Could I schedule an appointment to learn more about it and my other options to get involved at UCF?"><strong>Schedule Consultation</strong></a></p>');
+        $resultBox.append('<hr class="my-4"><p class="text-center">Schedule a consultation with KnightQuest to learn more about your program and many others. Be sure to screenshot your result!</p><p class="text-center"><a class="btn btn-warning btn-lg" href="mailto:kortoutreach@ucf.edu?subject=Schedule KnightQuest Appointment&body=I got ' + plants[resultList[0]].name + ' as my result from the OSI Quiz. Could I schedule an appointment to learn more about it and my other options to get involved at UCF?"><strong>Schedule Consultation</strong></a></p>');
         
    
         //Animated scroll

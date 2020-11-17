@@ -1,3 +1,4 @@
+
 .zoom-effect {
     overflow: hidden;
 }
@@ -58,19 +59,19 @@ h1 {
     width: 33%;
     height: 1em;
     float: left;
-    background-color: rgb(32, 32, 32);
+    background-color: #AC631E;
 }
 .bar-2 {
     width: 33%;
     height: 1em;
     float: left;
-    background-color:#ffc904;
+    background-color:#899F4A;
 }
 .bar-3 {
     width: 33%;
     height: 1em;
     float: left;
-    background-color: #000;
+    background-color: #2B4D1B;
 }
 .footer {
     width: 100%;
@@ -100,5 +101,6 @@ body{
     }
     .h1 {
         font-size: 2em;
+        
     }
   }
