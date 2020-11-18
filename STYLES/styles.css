@@ -2,6 +2,12 @@ a {
     color: black;
 }
 
+a:hover 
+{
+    color:#899F4A;
+    text-decoration: none;
+}
+
 .btn
 {
     background-color:#2B4D1B;
@@ -40,5 +46,7 @@ body {
     overflow: auto;
     height: 100%;
 }
+
+
 
 
