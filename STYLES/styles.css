@@ -18,7 +18,7 @@ a:hover
 .container h2
 {
     color:#2B4D1B;
-    font-family: 'Merriweather', serif;
+    font-family: 'Quicksand', sans-serif;
 
 }
 
@@ -29,14 +29,14 @@ a:hover
 
 .container p 
 {
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Merriweather', serif;
 }
 
 .nav-item
 {
     font-family: 'Quicksand', sans-serif;
-   
 }
+
 html {
     overflow: hidden;
     height: 100%;
@@ -45,6 +45,16 @@ html {
 body {
     overflow: auto;
     height: 100%;
+}
+
+.btn:hover 
+{
+    background-color:#AC631E;
+}
+
+.jumbotron
+{
+    font-family: 'Quicksand', sans-serif;
 }
 
 
