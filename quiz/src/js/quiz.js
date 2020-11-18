@@ -1,19 +1,186 @@
-const QUIZLENGTH = 11
+const QUIZLENGTH = 12;
 // array of objects
 const plants = [
-
     {
-        name: "Plant 1",
-        info: "Description 1. Describes the plant, some of its characters. Below is a link to the plant or to buy it",
+        name: "Chinese Evergreen",
+        info: "Aglaonema spp., aroids .",
         link: "https://example.com/"
     },
-
     {
-        name: "Plant 2",
-        info: "Description 2. Describes the plant, some of its characters. Below is a link to the plant or to buy it",
+        name: "Alocasia Polly",
+        info: "Alocasia 'Polly',  aroids.",
+        link: "https://example.com/"
+    },
+    {
+        name: "Elephant Ears",
+        info: "Alocasia spp.,  aroids.",
+        link: "https://example.com/"
+    },
+    {
+        name: "Aloe vera",
+        info: "Aloe vera, Succulents.",
+        link: "https://example.com/"
+    },
+    {
+        name: "Flamingo Flower",
+        info: "Anthurium spp.,  aroids.",
+        link: "https://example.com/"
+    },
+    {
+        name: "Cast Iron Plant",
+        info: "Aspidistra elatior",
+        link: "https://example.com/"
+    },
+    {
+        name: "Ponytail Palm",
+        info: "Beaucarnea recurvata",
+        link: "https://example.com/"
+    },
+    {
+        name: "Rex Begonia",
+        info: "Begonia spp.",
+        link: "https://example.com/"
+    },
+    {
+        name: "Peacock Plant",
+        info: "Calathea makoyana, prayer plants",
+        link: "https://example.com/"
+    },
+    {
+        name: "Calathea Medallion",
+        info: "Calathea roseopicta 'Medallion',  prayer plants",
+        link: "https://example.com/"
+    },
+    {
+        name: "Parlor Palm",
+        info: "Chamaedorea elegans, palms.",
+        link: "https://example.com/"
+    },
+    {
+        name: "Jade Plant",
+        info: "Crassula ovata, succulents.",
+        link: "https://example.com/"
+    },
+    {
+        name: "Sago Palm",
+        info: "Cycas revoluta, cycads.",
+        link: "https://example.com/"
+    },
+    {
+        name: "Dumb Cane",
+        info: "Dieffenbachia spp., aroids.",
+        link: "https://example.com/"
+    },
+    {
+        name: "Corn Plant",
+        info: "Dracaena fragrans",
+        link: "https://example.com/"
+    },
+    {
+        name: "Dracaena Marginata",
+        info: "Dracaena reflexa var. angustifolia",
+        link: "https://example.com/"
+    },
+    {
+        name: "Snake Plant",
+        info: "Dracaena trifasciata, succulents",
+        link: "https://example.com/"
+    }, 
+    {
+        name: "Echeveria",
+        info: "Echeveria spp., succulents",
+        link: "https://example.com/"
+    },
+    {
+        name: "Golden Barrel Cactus",
+        info: "Echinocactus grusonii, cacti",
+        link: "https://example.com/"
+    },
+    {
+        name: "Pothos",
+        info: "Epipremnum aureum, aroids",
+        link: "https://example.com/"
+    },
+    {
+        name: "Indian Rubber Tree",
+        info: "Ficus elastica",
+        link: "https://example.com/"
+    },
+    {
+        name: "Fiddle Leaf Fig",
+        info: "Ficus lyrata",
+        link: "https://example.com/"
+    },
+    {
+        name: "Nerve Plant",
+        info: "Fittonia spp.",
+        link: "https://example.com/"
+    },
+    {
+        name: "Ox Tongue",
+        info: "Gasteria bicolor, succulents",
+        link: "https://example.com/"
+    },
+    {
+        name: "Haworthia",
+        info: "Haworthia fasciata, succulents",
+        link: "https://example.com/"
+    },
+    {
+        name: "Prayer Plant",
+        info: "Maranta leuconeura, prayer plants",
+        link: "https://example.com/"
+    },
+    {
+        name: "Monstera ",
+        info: "Monstera deliciosa, aroids",
+        link: "https://example.com/"
+    },
+    {
+        name: "Bunny Ear Cactus",
+        info: "Opuntia microdasys, cacti",
+        link: "https://example.com/"
+    },
+    {
+        name: "Radiator Plant",
+        info: "Peperomia spp.",
+        link: "https://example.com/"
+    },
+    {
+        name: "Moth Orchid",
+        info: "Phalaenopsis spp., orchids",
+        link: "https://example.com/"
+    },
+    {
+        name: "Heart-leaf Philodendron",
+        info: "Philodendron hederaceum, aroids",
+        link: "https://example.com/"
+    },
+    {
+        name: "Majesty Palm",
+        info: "Ravenea rivularis, palms",
+        link: "https://example.com/"
+    },
+    {
+        name: "Burro\'s Tail",
+        info: "Sedum morganianum, succulents",
+        link: "https://example.com/"
+    },
+    {
+        name: "Peace Lily",
+        info: "Spathiphylum spp., aroids",
+        link: "https://example.com/"
+    },
+    {
+        name: "Arrowhead Vine",
+        info: "Syngonium podophyllum, aroids",
+        link: "https://example.com/"
+    },
+    {
+        name: "ZZ Plant",
+        info: "Zamioculcas zamiifolia, aroids",
         link: "https://example.com/"
     }
-
 ];
 
 // Bonnieblue would like a dropdown menu for the additional matches for the user
@@ -61,17 +228,15 @@ var Quiz = function () {
        The length of the 2D array is equal to the number of questions
         */
        
-        // plantsAnswers[0] = Plant 1
-        const p1 = new Array(["a","a"], ["a",  "c", "d"], ["a", "c"], ["a"], ["a", "c","d"], ["a", "d"], ["a", "a"], ["a","a","a"], ["a","a","a"], ["a","a","a"], ["a","a","a"]);
-
+        // plantsAnswers[0] = Chinese Evergreen
+        const ce = new Array(["b", "c", "d"],["b"], ["b"], ["b"], ["c","d"], ["b"], ["b","c"],["a","b"],["a","b","c","d","e"],["a","b","c","d","e"], ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
         // plantsAnswers[1] = Plant 2
-        const p2 = new Array(["b","b"], [ "b", "c", "d"], ["b", "c"], ["b"], ["b", "c","d"], ["b", "d"], ["b", "b"], ["b","b","b"], ["b","b","b"], ["b","b","b"], ["b","b","b"]);
 
 
 
         //add them all into one master array
         //Needs to be added
-        const plantsAnswers = new Array(p1, p2);
+        const plantsAnswers = new Array(ce);
         
         const userChoices = this._tallyResponses();
 
@@ -157,7 +322,7 @@ var Quiz = function () {
 
 
         $resultBox.addClass("resultComplete jumbotron");
-        $resultBox.html("<h1 class='mb-4'><p>Here is your result!</p> <p>You matched with <i>" + plants[resultList[0]].name + '</i></p> </h1> <p>' + plants[resultList[0]].info + '</p><p class="text-center"><a style="background-color: #AC631E;"class="my-3 mx-auto btn text-white btn-lg" href="' + plants[resultList[0]].link + '"target="_blank"><strong>Learn more</strong></a></p>');
+        $resultBox.html("<h1 class='mb-4'><p>Here is your result!</p> <p>You matched with <i>" + plants[resultList[0]].name + '</i></p> </h1> <p class="text-center">' + plants[resultList[0]].info + '</p><p class="text-center"><a style="background-color: #AC631E;"class="my-3 mx-auto btn text-white btn-lg" href="' + plants[resultList[0]].link + '"target="_blank"><strong>Learn more</strong></a></p>');
 
         const resultToString = () => {
             var plant = '';
