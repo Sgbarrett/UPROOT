@@ -72,7 +72,7 @@ const plants = [
         link: "https://example.com/"
     },
     {
-        name: "Corn Plant",
+        name: "Corn Plant", 
         info: "Dracaena fragrans",
         link: "https://example.com/"
     },
@@ -229,14 +229,35 @@ var Quiz = function () {
         */
        
         // plantsAnswers[0] = Chinese Evergreen
-        const ce = new Array(["b", "c", "d"],["b"], ["b"], ["b"], ["c","d"], ["b"], ["b","c"],["a","b"],["a","b","c","d","e"],["a","b","c","d","e"], ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
-        // plantsAnswers[1] = Plant 2
+        const ce = new Array(["b", "c"],["b"], ["b"], ["b"], ["c","d"], ["b"], ["a","a", "b"],[""],["a","b","c","d"],["a","b","c","d"], ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
+        // plantsAnswers[1] = Alocasia Polly
+        const ap = new Array(["b", "c"], ["a"], ["a"], ["b"], ["c","d"], ["b"], ["a","a", "b"], [""], ["a","b","c","d"],["a","b","c","d"], ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
+        // plantsAnswers[2] = Elephant Ears
+        const ee = new Array(["a"], ["a"], ["a"], ["b"], ["c","d"], ["b"], ["a","a", "b"], [""], ["a","b","c","d"],["a","b","c","d"], ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
+        // plantsAnswers[3] = Aloe vera
+        const av = new Array(["b", "c", "d"], ["b"], ["a"], ["b"], ["a","b","c","d"], ["b","c"], ["a","a", "b"], [""], ["b","d"], ["a","d"], ["a","a","b","b","b","b","c","c","c","c"], ["a","b","c"] );
+        // plantsAnswers[4] = Flamingo Flower
+        const ff = new Array(["b","c"], ["b"], ["b"], ["b"], ["c","d"], ["b"], ["a","a", "b"], [""], ["a","b","c","d"],["a","b","c","d"],  ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
+        // plantsAnswers[5] =  Cast Iron Plant
+        const cip = new Array(["a","b"], ["b"], ["b"], ["a","a"], ["a","b","c","d"], ["c"], ["b","b","c","c"], [""],["a","b","c","d"], ["a","b","c","d"],  ["a","a","b","b","b","b","c","c","c"],  ["a","b","c"]);
+        // plantsAnswers[6] = Ponytail Palm
+        const pyp = new Array(["b","c"], ["a"], ["b"], ["a","a"], ["a","b","c","d"], ["c"], ["a","b"], [""], ["a","b","c","d"], ["a","b","c","d"],  ["a","a","b","b","b","b","c","c","c"],  ["a","b","c"]);
+        // plantsAnswers[7] = Rex Begonia
+        const rb = new Array(["b", "c", "d"],["b"], ["b"], ["b"], ["c","d"], ["b"], ["a","a", "b"],[""],["a","b","c","d"],["a","b","c","d"], ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
+        // plantsAnswers[8] = Peacock Plant
+        const pcp = new Array(["b", "c"], ["a"], ["a"], ["a","a"], ["c","d"], ["b"], ["b","b","c","c"], [""], ["a","b","c","d"],["a","b","c","d"], ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
+        // plantsAnswers[9] = Calathea Medallion
+        const cm = new Array(["b", "c"], ["a"], ["a"], ["a","a"], ["c","d"], ["b"], ["b","b","c","c"], [""], ["a","b","c","d"],["a","b","c","d"], ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
+        // plantsAnswers[10] = Parlor Palm
+        const pp= new Array(["b", "c"], ["a"], ["b"], ["a","a"], ["a","b","c","d"], ["b","b","c","c"],[""], ["a","b"], ["a","b","c","d"], ["a","b","c","d"],  ["a","a","b","b","b","b","c","c","c"], ["a","b"]);
 
+        // plantsAnswers[] = 
+        //const p?= new Array([""], [""], [""], [""], [""], [""], [""], ["a","b"], [""], [""], [""], [""]);
 
 
         //add them all into one master array
         //Needs to be added
-        const plantsAnswers = new Array(ce);
+        const plantsAnswers = new Array(ce, ap, ee, av,ff,cip,pyp,rb,pcp,cm,pp);
         
         const userChoices = this._tallyResponses();
 
@@ -322,12 +343,12 @@ var Quiz = function () {
 
 
         $resultBox.addClass("resultComplete jumbotron");
-        $resultBox.html("<h1 class='mb-4'><p>Here is your result!</p> <p>You matched with <i>" + plants[resultList[0]].name + '</i></p> </h1> <p class="text-center">' + plants[resultList[0]].info + '</p><p class="text-center"><a style="background-color: #AC631E;"class="my-3 mx-auto btn text-white btn-lg" href="' + plants[resultList[0]].link + '"target="_blank"><strong>Learn more</strong></a></p>');
+        $resultBox.html("<h1 class='mb-4'><p>Here is your result!</p> <p>You matched with <i>" + plants[resultList[0]].name + '</i></p> </h1> <p class="text-center">' + plants[resultList[0]].info + '</p><p class="text-center"><a style="background-color: #DD8F43;"class="my-3 mx-auto btn text-white btn-lg" href="' + plants[resultList[0]].link + '"target="_blank"><strong>Learn more</strong></a></p>');
 
         const resultToString = () => {
             var plant = '';
             for (let i = 1; i < resultList.length; i++) {
-                plant += '<li><a class="collapsed" href="#collapseInfo-' + i + '"data-toggle="collapse" role="button" aria-expanded="false" id="info-' + i + '"><h4><strong><u>' + plants[resultList[i]].name + '</u></strong></h4></a></li><p class="collapse text-center" id="collapseInfo-' + i + '">' + plants[resultList[i]].info + '<br><a style="background-color: #AC631E;"class="my-3 mx-auto btn text-white btn-lg" href="' + plants[resultList[i]].link + '" target="_blank"><strong>Learn more</strong></a></p>';
+                plant += '<li><a class="collapsed" href="#collapseInfo-' + i + '"data-toggle="collapse" role="button" aria-expanded="false" id="info-' + i + '"><h4><strong><u>' + plants[resultList[i]].name + '</u></strong></h4></a></li><p class="collapse text-center" id="collapseInfo-' + i + '">' + plants[resultList[i]].info + '<br><a style="background-color: #DD8F43;"class="my-3 mx-auto btn text-white btn-lg" href="' + plants[resultList[i]].link + '" target="_blank"><strong>Learn more</strong></a></p>';
 
                 //add objects to results array
                 results.push(plants[resultList[i]]);
