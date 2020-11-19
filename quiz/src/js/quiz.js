@@ -229,15 +229,15 @@ var Quiz = function () {
         */
        
         // plantsAnswers[0] = Chinese Evergreen
-        const ce = new Array(["b", "c"],["b","b","b"], ["b"], ["b"], ["c","d"], ["b"], ["a","a", "b"],[""],["a","b","c","d"],["a","b","c","d"], ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
+        const ce = new Array(["b", "c"],["b","b","b"], ["b"], ["b"], ["c","d"], ["b"], ["a","a", "b"],[""],["a","b","c","d"],["a","b","c","d"], ["a", "a", "a", "a", "b", "b", "c"],["a"]);
         // plantsAnswers[1] = Alocasia Polly
-        const ap = new Array(["b", "c"], ["a","a","a"], ["a"], ["b"], ["c","d"], ["b"], ["a","a", "b"], [""], ["a","b","c","d"],["a","b","c","d"], ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
+        const ap = new Array(["b", "c"], ["a","a","a"], ["a","a"], ["b"], ["c","d"], ["b"], ["a","a", "b"], [""], ["a","b","c","d"],["a","b","c","d"], ["a", "a", "a", "a", "b", "b", "c"],["a"]);
         // plantsAnswers[2] = Elephant Ears
-        const ee = new Array(["a"], ["a","a","a"], ["a"], ["b"], ["c","d"], ["b"], ["a","a", "b"], [""], ["a","b","c","d"],["a","b","c","d"], ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
+        const ee = new Array(["a","b"], ["a","a","a"], ["a","a"], ["b"], ["c","d"], ["b"], ["a","a", "b"], [""], ["a","b","c","d"],["a","b","c","d"], ["a", "a", "a", "a", "b", "b", "c"],["a"]);
         // plantsAnswers[3] = Aloe vera
-        const av = new Array(["b", "c", "d"], ["b","b","b"], ["a"], ["b"], ["a","b","c","d"], ["b","c"], ["a","a", "b"], [""], ["b","d"], ["a","d"], ["a","a","b","b","b","b","c","c","c","c"], ["a","b","c"] );
+        const av = new Array(["b", "c", "d"], ["b","b","b"], ["b"], ["b"], ["a","b","c","d"], ["b","c"], ["a","a", "b"], [""], ["b","d"], ["a","d"], ["a","a","b","b","b","b","c","c","c","c"], ["a","b","c"] );
         // plantsAnswers[4] = Flamingo Flower
-        const ff = new Array(["b","c"], ["b","b","b"], ["b"], ["b"], ["c","d"], ["b"], ["a","a", "b"], [""], ["a","b","c","d"],["a","b","c","d"],  ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
+        const ff = new Array(["b","c"], ["b","b","b"], ["b"], ["b"], ["c","d"], ["b"], ["a","a", "b"], [""], ["a","b","c","d"],["a","b","c","d"],  ["a", "a", "a", "a", "b", "b", "c"],["a"]);
         // plantsAnswers[5] =  Cast Iron Plant
         const cip = new Array(["a","b"], ["b","b","b"], ["b"], ["a","a"], ["a","b","c","d"], ["c"], ["b","c","c"], [""],["a","b","c","d"], ["a","b","c","d"],  ["a","a","b","b","b","b","c","c","c"],  ["a","b","c"]);
         // plantsAnswers[6] = Ponytail Palm
@@ -245,21 +245,67 @@ var Quiz = function () {
         // plantsAnswers[7] = Rex Begonia
         const rb = new Array(["b", "c", "d"],["b","b","b"], ["b"], ["b"], ["c","d"], ["b"], ["a","a", "b"],[""],["a","b","c","d"],["a","b","c","d"], ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
         // plantsAnswers[8] = Peacock Plant
-        const pcp = new Array(["b", "c"], ["a","a","a"], ["a"], ["a","a"], ["c","d"], ["b"], ["b","c","c"], [""], ["a","b","c","d"],["a","b","c","d"], ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
+        const pcp = new Array(["b", "c"], ["a","a","a"], ["b"], ["a","a"], ["c","d"], ["b"], ["b","c","c"], [""], ["a","b","c","d"],["a","b","c","d"], ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
         // plantsAnswers[9] = Calathea Medallion
-        const cm = new Array(["b", "c"], ["a","a","a"], ["a"], ["a","a"], ["c","d"], ["b"], ["b","c","c"], [""], ["a","b","c","d"],["a","b","c","d"], ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
+        const cm = new Array(["b", "c"], ["a","a","a"], ["b"], ["a","a"], ["c","d"], ["b"], ["b","c","c"], [""], ["a","b","c","d"],["a","b","c","d"], ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
         // plantsAnswers[10] = Parlor Palm
         const pp= new Array(["b", "c"], ["a","a","a"], ["b"], ["a","a"], ["a","b","c","d"], ["b","c","c"],[""], ["a","b"], ["a","b","c","d"], ["a","b","c","d"],  ["a","a","b","b","b","b","c","c","c"], ["a","b"]);
-        // plantsAnswers[] = 
-        const jp = new Array(["b", "c", "d"], ["b","b","b"], ["a"], ["b"], ["a","b","c","d"], ["b","c"], ["a","a", "b"], [""], ["b","d"], ["a","d"], ["a","a","b","b","b","b","c","c","c","c"], ["a","b","c"] );
+        // plantsAnswers[11] = Jade Plant 
+        const jp = new Array(["a","b"], ["b","b","b"], ["b"], ["b"], ["a","b","c","d"], ["b","c"], ["a","a", "b"], [""], ["b","d"], ["a","d"], ["a","a","b","b","b","b","c","c","c","c"], ["a","b","c"] );
+        // plantsAnswers[12] = Sago Palm
+        const sp = new Array(["b","c"], ["b","b","b"], ["b"], ["b"], ["a","b","c","d"], ["b","c"], ["a","a", "b"], [""], ["b","d"], ["a","d"], ["a","a","b","b","b","b","c","c","c","c"], ["a","b"] );
+        // plantsAnswers[13] = Dumb Cane
+        const dc = new Array(["a","a"], ["a","a","a"], ["a","a"], ["b"], ["c","d"], ["b"], ["a","a", "b"], [""], ["b","d"], ["a","d"], ["a","a","b","b","b","b","c","c","c","c"], ["a","a"] );
+        // plantsAnswers[14] = Corn Plant
+        const cp = new Array(["a","a"], ["a","a","a"], ["b"], ["b"], ["a","b","c","d"], ["c"], ["b","c","c"], [""], ["a","b","c","d"], ["a","b","c","d"],  ["a","a","b","b","b","b","c","c","c"],  ["a","b"]);
+        // plantsAnswers[15] = Dracaena Marginata
+        const dm = new Array(["a","a"], ["a","a","a"], ["b"], ["b"], ["a","b","c","d"], ["c"], ["b","c","c"], [""], ["a","b","c","d"], ["a","b","c","d"],  ["a","a","b","b","b","b","c","c","c"],  ["a","b"]);
+        // plantsAnswers[16] = Snake Plant
+        const snk = new Array(["a","b"], ["a","a","a"], ["a","a"], ["b"], ["a","b","c","d"], ["c"], ["a","a", "b"], [""], ["a","b","c","d"], ["a","b","c","d"],  ["a","a","b","b","b","b","c","c","c"],  ["a","b","c"]);
+        // plantsAnswers[17] = Echeveria
+        const ech = new Array(["b","c","d"], ["e","e","e"], ["a","a"], ["a","a"], ["a","b","c","d"], ["b","c"], ["a","a", "b"], [""], ["b","d"], ["a","d"], ["a","a","b","b","b","b","c","c","c","c"], ["a","b","c"] );
+        // plantsAnswers[18] = Golden Barrel Cacti
+        const gbc = new Array(["b","c","d"], ["b","b","b"], ["b"], ["b"], ["a","b","c","d"], ["b","c"], ["a","a", "b"], [""], ["b","d"], ["a","d"], ["a","a","b","b","b","b","c","c","c","c"], ["a","b","c"] );
+        // plantsAnswers[19] = Golden Barrel Cacti
+        const pot = new Array(["b","c"], ["d","d","d"], ["b"], ["b"], ["b"], ["b","c"], ["a","a","b"], [""], ["a","b","c","d"], ["a","b","c","d"],  ["a","a","b","b","b","b","c","c","c"],  ["a","b","c"]);
+        // plantsAnswers[20] = Indian Rubber Tree
+        const irt = new Array(["a","a"], ["a","a","a"], ["a","a"], ["b"], ["c","d"], ["b"], ["a","a", "b"], [""], ["b","d"], ["a","d"], ["a","a","b","b","b","b","c","c","c","c"], ["a","b"] );
+        // plantsAnswers[21] = Fiddle Leaf Fig
+        const fff = new Array(["a","a"], ["a","a","a"], ["a","a"], ["b"], ["c","d"], ["b"], ["a","a", "b"], [""], ["b","d"], ["a","d"], ["a","a","b","b","b","b","c","c","c","c"], ["a","b"] );
+        // plantsAnswers[22] = Nerve Plant
+        const np = new Array(["b","c","d"], ["b","b","e","e"], ["b"], ["a","a"], ["a","b","c","d"], ["a"], ["a","b"], [""], ["a","b","c","d"], ["a","b","c","d"],  ["a","a","b","b","b","b","c","c","c"],  ["a","b","c"]);
+        // plantsAnswers[23] = Ox Tongue
+        const ox = new Array(["b","c","d"], ["a","a","a"], ["a","a"], ["a","a"], ["a","b","c","d"], ["b","c"], ["a","a", "b"], [""], ["b","d"], ["a","d"], ["a","a","b","b","b","b","c","c","c","c"], ["a","b","c"] );
+        // plantsAnswers[24] = Haworthia
+        const haw = new Array(["b","c","d"], ["b","b","b"], ["a","a"], ["a","a"], ["a","b","c","d"], ["b","c"], ["a","a", "b"], [""], ["b","d"], ["a","d"], ["a","a","b","b","b","b","c","c","c","c"], ["a","b"] );
+        // plantsAnswers[25] = Prayer Plant
+        const pray = new Array(["b", "c"], ["d","d","c","c"], ["a","a"], ["b"], ["c","d"], ["b"], ["b","c","c"], [""], ["a","b","c","d"],["a","b","c","d"], ["a", "a", "a", "a", "b", "b", "c"],["a"]);
+        // plantsAnswers[26] = Monstera
+        const mon = new Array(["a","a"], ["d","d","d"], ["a","a"], ["b"], ["c","d"], ["b"], ["b","c", "c"], [""], ["a","b","c","d"],["a","b","c","d"], ["a", "a", "a", "a", "b", "b", "c"],["a"]);
+        // plantsAnswers[27] = Monstera
+        const bec = new Array(["b","c"], ["b","b","b"], ["b"], ["b"], ["a","b","c","d"], ["b","c"], ["a","a", "b"], [""], ["b","d"], ["a","d"], ["a","a","b","b","b","b","c","c","c","c"], ["a","b","c"] );
+        // plantsAnswers[28] =  Radiator Plant
+        const rp = new Array(["b","c","d"], ["b","b"], ["b"], ["a","a"], ["a","b","c","d"], ["b"], ["a","b"], [""], ["a","b","c","d"], ["a","b","c","d"],  ["a","a","b","b","b","b","c","c","c"],  ["a","b"]);
+        // plantsAnswers[29] = Golden Barrel Cacti
+        const mo = new Array(["b","c"], ["a","a","a"], ["b"], ["a","a"], ["b"], ["b"], ["a","a","b"], [""], ["a","b","c","d"], ["a","b","c","d"],  ["a","a","b","b","b","b","c","c","c"],  ["a"]);
+        // plantsAnswers[30] = Heart-leaf Philodendron
+        const hlp = new Array(["b","c"], ["d","d","d"], ["b"], ["b"], [" c","d"], ["b","c"], ["b","c","c"], [""], ["a","b","c","d"], ["a","b","c","d"],  ["a","a","b","b","b","b","c","c","c"],  ["a","b"]);
+        // plantsAnswers[31] = Majesty Palm
+        const mp = new Array(["a","a"], ["a","a","a"], ["b"], ["a","a"], ["c","d"], ["b"], ["b","c","c"], [""], ["b","d"], ["a","d"], ["a","a","b","b","b","b","c","c","c","c"], ["a","b"] );
+        // plantsAnswers[32] = Burro's Tail
+        const bt = new Array(["b","c"], ["c","c","c"], ["b"], ["a","a"],  ["a","b","c","d"], ["b","c","c"], ["a","a", "b"], [""], ["b","d"], ["a","d"], ["a","a","b","b","b","b","c","c","c","c"], ["a","b"] );
+        // plantsAnswers[33] = Peace Lily
+        const pl = new Array(["a","b"], ["b","b", "b"], ["b"], ["a","a"], ["c","d"], ["a"], ["a", "a", "b"], [""], ["a","b","c","d"], ["a","b","c","d"],  ["a","a","b","b","b","b","c","c","c"],  ["a","b","c"]);
+        // plantsAnswers[34] = Arrowhead Vine
+        const awv = new Array(["b","c"], ["b","c","d"], ["b"], ["b"], ["c","d"], ["b"], ["a","a", "b"], [""], ["a","b","c","d"],["a","b","c","d"],  ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
+        // plantsAnswers[35] = ZZ Plant
+        const zz = new Array(["a","b"], ["b","b","b"], ["b"], ["b"], ["a","b","c","d"], ["c"], ["a","a", "b"], [""], ["a","b","c","d"], ["a","b","c","d"],  ["a","a","b","b","b","b","c","c","c"],  ["a","b"]);
 
-        // plantsAnswers[] = 
-        //const p?= new Array([""], [""], [""], [""], [""], [""], [""], ["a","b"], [""], [""], [""], [""]);
-
+        
 
         //add them all into one master array
         //Needs to be added
-        const plantsAnswers = new Array(ce, ap, ee, av,ff,cip,pyp,rb,pcp,cm,pp, jp);
+        const plantsAnswers = new Array(ce, ap, ee, av,ff,cip,pyp,rb,pcp,cm,pp, jp, sp, dc,cp, dm, snk, ech, gbc, pot, irt,fff,np, ox, haw, pray, mon, bec, rp, mo, hlp, mp, bt, pl, awv, zz);
         
         const userChoices = this._tallyResponses();
 

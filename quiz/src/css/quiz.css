@@ -12,7 +12,7 @@
 .zoom-effect:hover img {
     transform: scale(1.112);
 }
-.disabled img {
+.disabled .card-body{
     opacity: 0.35;
 }
 .quiz-choice {
