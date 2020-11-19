@@ -62,5 +62,11 @@ body {
     color:#DD8F43;
 }
 
+/* Fix for banner background images */
+.jumbotron {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 
 
