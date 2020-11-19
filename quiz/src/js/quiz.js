@@ -229,27 +229,29 @@ var Quiz = function () {
         */
        
         // plantsAnswers[0] = Chinese Evergreen
-        const ce = new Array(["b", "c"],["b"], ["b"], ["b"], ["c","d"], ["b"], ["a","a", "b"],[""],["a","b","c","d"],["a","b","c","d"], ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
+        const ce = new Array(["b", "c"],["b","b","b"], ["b"], ["b"], ["c","d"], ["b"], ["a","a", "b"],[""],["a","b","c","d"],["a","b","c","d"], ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
         // plantsAnswers[1] = Alocasia Polly
-        const ap = new Array(["b", "c"], ["a"], ["a"], ["b"], ["c","d"], ["b"], ["a","a", "b"], [""], ["a","b","c","d"],["a","b","c","d"], ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
+        const ap = new Array(["b", "c"], ["a","a","a"], ["a"], ["b"], ["c","d"], ["b"], ["a","a", "b"], [""], ["a","b","c","d"],["a","b","c","d"], ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
         // plantsAnswers[2] = Elephant Ears
-        const ee = new Array(["a"], ["a"], ["a"], ["b"], ["c","d"], ["b"], ["a","a", "b"], [""], ["a","b","c","d"],["a","b","c","d"], ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
+        const ee = new Array(["a"], ["a","a","a"], ["a"], ["b"], ["c","d"], ["b"], ["a","a", "b"], [""], ["a","b","c","d"],["a","b","c","d"], ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
         // plantsAnswers[3] = Aloe vera
-        const av = new Array(["b", "c", "d"], ["b"], ["a"], ["b"], ["a","b","c","d"], ["b","c"], ["a","a", "b"], [""], ["b","d"], ["a","d"], ["a","a","b","b","b","b","c","c","c","c"], ["a","b","c"] );
+        const av = new Array(["b", "c", "d"], ["b","b","b"], ["a"], ["b"], ["a","b","c","d"], ["b","c"], ["a","a", "b"], [""], ["b","d"], ["a","d"], ["a","a","b","b","b","b","c","c","c","c"], ["a","b","c"] );
         // plantsAnswers[4] = Flamingo Flower
-        const ff = new Array(["b","c"], ["b"], ["b"], ["b"], ["c","d"], ["b"], ["a","a", "b"], [""], ["a","b","c","d"],["a","b","c","d"],  ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
+        const ff = new Array(["b","c"], ["b","b","b"], ["b"], ["b"], ["c","d"], ["b"], ["a","a", "b"], [""], ["a","b","c","d"],["a","b","c","d"],  ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
         // plantsAnswers[5] =  Cast Iron Plant
-        const cip = new Array(["a","b"], ["b"], ["b"], ["a","a"], ["a","b","c","d"], ["c"], ["b","b","c","c"], [""],["a","b","c","d"], ["a","b","c","d"],  ["a","a","b","b","b","b","c","c","c"],  ["a","b","c"]);
+        const cip = new Array(["a","b"], ["b","b","b"], ["b"], ["a","a"], ["a","b","c","d"], ["c"], ["b","c","c"], [""],["a","b","c","d"], ["a","b","c","d"],  ["a","a","b","b","b","b","c","c","c"],  ["a","b","c"]);
         // plantsAnswers[6] = Ponytail Palm
-        const pyp = new Array(["b","c"], ["a"], ["b"], ["a","a"], ["a","b","c","d"], ["c"], ["a","b"], [""], ["a","b","c","d"], ["a","b","c","d"],  ["a","a","b","b","b","b","c","c","c"],  ["a","b","c"]);
+        const pyp = new Array(["b","c"], ["a","a","a"], ["b"], ["a","a"], ["a","b","c","d"], ["c"], ["a","b"], [""], ["a","b","c","d"], ["a","b","c","d"],  ["a","a","b","b","b","b","c","c","c"],  ["a","b","c"]);
         // plantsAnswers[7] = Rex Begonia
-        const rb = new Array(["b", "c", "d"],["b"], ["b"], ["b"], ["c","d"], ["b"], ["a","a", "b"],[""],["a","b","c","d"],["a","b","c","d"], ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
+        const rb = new Array(["b", "c", "d"],["b","b","b"], ["b"], ["b"], ["c","d"], ["b"], ["a","a", "b"],[""],["a","b","c","d"],["a","b","c","d"], ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
         // plantsAnswers[8] = Peacock Plant
-        const pcp = new Array(["b", "c"], ["a"], ["a"], ["a","a"], ["c","d"], ["b"], ["b","b","c","c"], [""], ["a","b","c","d"],["a","b","c","d"], ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
+        const pcp = new Array(["b", "c"], ["a","a","a"], ["a"], ["a","a"], ["c","d"], ["b"], ["b","c","c"], [""], ["a","b","c","d"],["a","b","c","d"], ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
         // plantsAnswers[9] = Calathea Medallion
-        const cm = new Array(["b", "c"], ["a"], ["a"], ["a","a"], ["c","d"], ["b"], ["b","b","c","c"], [""], ["a","b","c","d"],["a","b","c","d"], ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
+        const cm = new Array(["b", "c"], ["a","a","a"], ["a"], ["a","a"], ["c","d"], ["b"], ["b","c","c"], [""], ["a","b","c","d"],["a","b","c","d"], ["a", "a", "a", "a", "b", "b", "c"],["a", "b"]);
         // plantsAnswers[10] = Parlor Palm
-        const pp= new Array(["b", "c"], ["a"], ["b"], ["a","a"], ["a","b","c","d"], ["b","b","c","c"],[""], ["a","b"], ["a","b","c","d"], ["a","b","c","d"],  ["a","a","b","b","b","b","c","c","c"], ["a","b"]);
+        const pp= new Array(["b", "c"], ["a","a","a"], ["b"], ["a","a"], ["a","b","c","d"], ["b","c","c"],[""], ["a","b"], ["a","b","c","d"], ["a","b","c","d"],  ["a","a","b","b","b","b","c","c","c"], ["a","b"]);
+        // plantsAnswers[] = 
+        const jp = new Array(["b", "c", "d"], ["b","b","b"], ["a"], ["b"], ["a","b","c","d"], ["b","c"], ["a","a", "b"], [""], ["b","d"], ["a","d"], ["a","a","b","b","b","b","c","c","c","c"], ["a","b","c"] );
 
         // plantsAnswers[] = 
         //const p?= new Array([""], [""], [""], [""], [""], [""], [""], ["a","b"], [""], [""], [""], [""]);
@@ -257,7 +259,7 @@ var Quiz = function () {
 
         //add them all into one master array
         //Needs to be added
-        const plantsAnswers = new Array(ce, ap, ee, av,ff,cip,pyp,rb,pcp,cm,pp);
+        const plantsAnswers = new Array(ce, ap, ee, av,ff,cip,pyp,rb,pcp,cm,pp, jp);
         
         const userChoices = this._tallyResponses();
 
