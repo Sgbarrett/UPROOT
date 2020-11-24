@@ -69,4 +69,7 @@ body {
     background-position: center;
 }
 
-
+/* row spacing */
+.link-grid .row div {
+    margin-bottom: 2rem;
+}
